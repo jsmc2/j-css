@@ -1,6 +1,6 @@
-J-CSS is a alpha stage tool to help build js pojos that define css classes and then from which build out those css class defintion into a style tag.
+PojoStyle is a alpha stage tool to help build js pojos that define css classes and then from which build out those css class defintion into a style tag.
 
--= j-css methods =-
+-= PojoStyle methods =-
 
 gIts is "get items"
 

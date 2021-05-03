@@ -1,0 +1,23 @@
+{
+  "name": "pojostyle",
+  "version": "1.0.0",
+  "description": "Build css style tags through the expressive use of javascript pojos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsmc2/pojostyle.git"
+  },
+  "author": "JS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsmc2/pojostyle/issues"
+  },
+  "homepage": "https://github.com/jsmc2/pojostyle#readme",
+  "dependencies": {
+    "murmurhash-js": "^1.0.0",
+    "style-object-to-css-string": "^1.0.1"
+  }
+}
