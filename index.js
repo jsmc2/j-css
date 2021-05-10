@@ -1,3 +1,3 @@
-export { PojoStyle } from './PojoStylePkg/index.js'
-import { PojoStyle } from 'PojoStyle'
+import { PojoStyle } from './PojoStylePkg'
+export { PojoStyle }
   
