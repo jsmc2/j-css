@@ -1,6 +1,6 @@
 {
   "name": "pojostyle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build css style tags through the expressive use of javascript pojos.",
   "main": "index.js",
   "scripts": {
