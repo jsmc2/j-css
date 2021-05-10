@@ -8,11 +8,11 @@
   It re-exports out its associated helper tools that are not 
   dependent working with the closure items.
 */
-import { uCk, uCm, uCf, mob as mrg } from './PojosMgrMod_helperTools';
+import { uCk, uCm, uCf, mob as mrg } from './helperTools';
 import { addToStyleTag as _addToStyleTag } from './pojosToTag';
 
 
-export const JcssMod = (selectorBase) =>  {
+export const PojoStyle = (selectorBase) =>  {
   let cssPojos = {}
   let selBase = selectorBase // This is typically a namespace class-name or substring that can be used to prefix selectors.
 

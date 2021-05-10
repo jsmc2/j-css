@@ -1,10 +1,8 @@
+import { PojoStyle } from 'PojoStyle'  // The NPM install.
 
-import { JcssMod } from '../from_vendor/jcss'
-import {colors} from '?/styles'
+const selectorBase = ".UserInfoHeader"
 
-const selectorBase = ".UserInfoHeaderVC"
-
-const {addToStyleTag, gIts, sIt, gIt, bId, sBs, gBs, gId, gMd, gSl, gSt, getKeys, resetAll, uCk, uCm, uCf, mrg } = JcssMod(selectorBase)
+const {addToStyleTag, gIts, sIt, gIt, bId, sBs, gBs, gId, gMd, gSl, gSt, getKeys, resetAll, uCk, uCm, uCf, mrg } = PojoStyle(selectorBase)
 
 const mdqry_min700 = '@media only screen and (min-width: calc(0.625 * 70rem))'
 
@@ -19,7 +17,7 @@ sIt(1, '_layoutGrid', {
   gridTemplateRows: 'auto',
   gap: '1rem',
   height: '7rem',
-  border: "solid .1rem #00f"
+  zz_border: "solid .1rem #00f"
 })
 
 sIt(1, '_gridItem:nth-child(2)', {
@@ -39,7 +37,7 @@ mrg([ gSt(),
   {
     hasFromMe: 1,
     [uCk()]: 'FromMe',
-    border: "solid .1rem red"
+    zz_border: "solid .1rem red"
   }])
 )
 
@@ -48,27 +46,10 @@ mrg([ gSt(1, '_gridItem:nth-child(3)'),
   {
     [uCk()]: uCf('Me'),
     [uCk()]: uCm("Just saying above, 'From Me' instead of giving idfier"),
-    border: "solid .1rem green"
+    zz_border: "solid .1rem green"
   }])
 )
 
-const cssItems = gIts()
+console.log("cssItems: ",  gIts()) // Just to peek at the css classes pojo.
 
-console.log("cssItems: ", cssItems)
 addToStyleTag(0) 
-
-/*
-THIS WORKS:
-resetAll("CatInfoHeaderVC")
-
-sIt(1, '_gridItem:nth-child(3)', {
-  // [cky()]: cmf(kg('I')),
-  display: 'grid',
-  justifyItems: 'right',
-})
-
-const cssItems2 = gIts()
-console.log("cssItems2: ", cssItems2)
-
-addToStyleTag(cssItems2, 'yada_mada_zada') 
-*/

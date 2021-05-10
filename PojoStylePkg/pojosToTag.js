@@ -2,31 +2,31 @@
   This file's CONCERN is to provide and handle the
   functionality to translate the css pojo items and
   add them to a default or specified style sheet, 
-  which is creaed if it doesn't exist.
+  which is created if it doesn't exist.
 */
 import murmur from "murmurhash-js"
 ///import { prefix } from "inline-style-prefixer";
 import styleObjectToCssString from "style-object-to-css-string";
 
 
-const bootDefaultJcssStyleTagId = "jcssStyleTag_Default_"+Date.now()
+const bootDefaultPogoStyleTagId = "PogoStyleTag_Default_"+Date.now()
 const bootSelectorsHashMap = {}
 
 export const addToStyleTag = (cssItems, tagIdfier) => { 
 
-  const jcssStyleTagId = typeof tagIdfier === 'undefined' ? bootDefaultJcssStyleTagId
-    : tagIdfier === 0 ? "jcssStyleTag_"+Date.now()
-      : "jcssStyleTag_"+tagIdfier
+  const pogoStyleTagId = typeof tagIdfier === 'undefined' ? bootDefaultPogoStyleTagId
+    : tagIdfier === 0 ? "PojoStyleTag_"+Date.now()
+      : "PojoStyleTag_"+tagIdfier
   
   // Add style tag to DOM:
-  let styleTag = document.getElementById(jcssStyleTagId);
+  let styleTag = document.getElementById(pogoStyleTagId);
   if (!styleTag) {
     const head = document.head || document.getElementsByTagName("head")[0],
       styleTag = document.createElement("style");
-    styleTag.setAttribute("id", jcssStyleTagId);
+    styleTag.setAttribute("id", pogoStyleTagId);
     head.appendChild(styleTag);
   }
-  styleTag = document.getElementById(jcssStyleTagId);
+  styleTag = document.getElementById(pogoStyleTagId);
 
   for (const [cssKey, cssPojo] of Object.entries(cssItems)) {
     ///const hashedKey = murmur.murmur3(cssPojo.mdq + "_" +cssPojo.sel, bootTimestamp)
